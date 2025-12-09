@@ -1,12 +1,12 @@
 count = 0
 with open("input.txt") as f:
-    # f = ["987654321111111", "811111111111119", "234234234234278", "818181911112111"]
+    #f = ["987654321111111", "811111111111119", "234234234234278", "818181911112111"]
     for line in f:
         # fDig, sDig = 0, 0
         numDig = []
+        line = line.strip()
         stackPops = len(line) - 12
         isLargest = -1
-        line = line.strip()
 
         for d in line:
             while numDig and stackPops > 0 and numDig[-1] < d:
